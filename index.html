@@ -42,6 +42,44 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
 <strong>HTML is used for creating webpages</strong>
 <mark>My favorite color is blue</mark>
 <p>My favorite color is <del>blue</del><ins>red</ins></p>
+<!----grid-->
+<style>
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navigation articles"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  background-color: #2196F3;
+  padding: 5px;
+}
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.navigation {
+  grid-area: nav;
+}
+.container > div.articles {
+  grid-area:article;
+}
+.container > div.footer {
+  grid-area: footer;
+}
+</style>
+
+<div class="container">
+  <div class="header"><h1>My Header</h1></div>
+  <div class="navigation"><a href="#">Link 1</a><br><a href="#">Link 2</a><br><a href="#">Link 3</a></div>
+  <div class="articles"><h2>A grid layout consists of a parent element </h2><p>All direct children of the grid container automatically become grid items.</p></div>
+  <div class="footer"><h3>Footer</h3></div>
+</div>
 <!--responsive images-->
 <img
   src="https://in.images.search.yahoo.com/images/view;_ylt=AwrKA2vqUoxoS7MG1Cu9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2M4NGMyZmJmOWM5ZDc4YzQ5MWFhMjllNjUwZjQ4MTM2BGdwb3MDMQRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dhtml%26type%3DE210IN826G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D1&w=1024&h=768&imgurl=www.devopsschool.com%2Fblog%2Fwp-content%2Fuploads%2F2022%2F03%2Fhtml2.jpg&rurl=https%3A%2F%2Fwww.devopsschool.com%2Fblog%2Fwhat-is-html-and-how-it-works-an-overview-and-its-use-cases%2F&size=127KB&p=html&oid=c84c2fbf9c9d78c491aa29e650f48136&fr2=piv-web&fr=mcafee&tt=What+is+HTML+and+How+it+works%3F+An+Overview+and+Its+Use+Cases+...&b=0&ni=21&no=1&ts=&tab=organic&sigr=6rQCoVCBetHm&sigb=toGyXfkmpeIl&sigi=norOszgZSZzl&sigt=71xAFySrTNOk&.crumb=S47MAqLSTTg&fr=mcafee&fr2=piv-web&type=E210IN826G0"
@@ -107,3 +145,32 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
   <h2 style="text-align:center;">Footer</h2>
 </footer>
 </div>
+
+<!---html forms-->
+ <div style="display: flex; justify-content: center; ">
+<form style="display: flex; 
+      flex-direction: column;
+      /* background-color: lightblue; */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 300px;">
+      <fieldset>
+    <legend>login details:</legend>
+ <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Himaja"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Kanakadandi"><br><br>
+  <textarea name="message" style="width:170px; height: 100px;">
+I'm learning HTML
+</textarea>
+<div style="padding:8px;"></div>
+<button type="button" style="margin-right: 10px;">Click Me!</button>
+<input type="submit" value="Submit">
+</fieldset>
+</form> 
+</div>
+
+
+
+
