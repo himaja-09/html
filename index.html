@@ -161,15 +161,60 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
   <input type="text" id="fname" name="fname" value="Himaja"><br>
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname" value="Kanakadandi"><br><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd">
+  <div style="padding:8px;"></div>
   <textarea name="message" style="width:170px; height: 100px;">
 I'm learning HTML
-</textarea>
+</textarea><br><br>
+<label for="favcolor">Select your favcolor:</label>
+<input type="color" id="favcolor" name="favcolor" value="#00000">
 <div style="padding:8px;"></div>
 <button type="button" style="margin-right: 10px;">Click Me!</button>
 <input type="submit" value="Submit">
 </fieldset>
 </form> 
 </div>
+
+<!---task2-->
+<div style="display: flex; justify-content: center; ">
+<form style="display: flex; 
+      flex-direction: column;
+      /* background-color: lightblue; */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 300px;">
+      <h1>Customer Feedback</h1>
+    <p>We would love to hear your thoughts or feedback on how we can improve your experience!</p>
+    <p class="required">* Required</p>
+<h2>Feedback Type</h2>
+<label><input type="radio" name="type"> Comments</label>
+        <label><input type="radio" name="type"> Questions</label>
+        <label><input type="radio" name="type"> Bug Reports</label>
+        <label><input type="radio" name="type"> Feature Request</label>
+        <p class="feedback">Feedback*</p>
+<input type="text" placeholder="Your answer">
+<div style="padding:8px;"></div>
+<label for="Suggestions for improvement">Suggestions for improvement:</label><br>
+<input type="text" placeholder="Your answer">
+<div style="padding:8px;"></div>
+<label for="Name">Name:</label><br>
+<input type="text" placeholder="Your answer">
+<div style="padding:8px;"></div>
+<label for="Email">Email:</label><br>
+<input type="text" placeholder="Your answer">
+<div style="padding:12px;"></div>
+<input type="submit" value="Submit" style="width: 80px;">
+
+
+
+
+
+
+
+
+
 
 
 
