@@ -2,25 +2,23 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 
 <body>
   <!-- Heading-->
   <h1>This is a heading</h1>
   <p>This is a paragraph.</p>
-</body>
 
-</html>
 <!--attributes-->
 <h1>My first heading</h1>
 <a href="https://www.w3schools.com">Visit W3Schools</a>
 <img src="img_girl.jpg" alt="girl_image">
-<h1 style="font-size:60px;">Heading 1</h1>
+<h1 class="heading-style">Heading 1</h1>
 <p>This is some text.</p>
-<h2 style="text-align:center;">Heading 2</h2>
+<h2 class="heading2-style">Heading 2</h2>
 <p>This is some other text.</p>
-<p style="color:red;">This is a red paragraph.</p>
+<p class="paragraph-style">This is a red paragraph.</p>
 <!--quotations-->
 <p>
 <p>Here is a quote from WWF's website:</p>
@@ -99,7 +97,7 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
 <!---task1-->
 <style>
   
-/* 
+ 
   header,
   nav,
   article,
@@ -107,7 +105,7 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
     border: 2px solid black;
     padding: 10px;
     margin: 10px;
-  } */
+  } 
 
   nav ul {
     list-style-type: none;
@@ -147,7 +145,7 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
 </div>
 
 <!---html forms-->
- <div style="display: flex; justify-content: center; ">
+ <div class="div-style display: flex; justify-content: center; ">
 <form style="display: flex; 
       flex-direction: column;
       /* background-color: lightblue; */
@@ -177,13 +175,14 @@ I'm learning HTML
 </div>
 
 <!---task2-->
-<div style="display: flex; justify-content: center; ">
+<div style="display: flex; justify-content: center; "></div>
 <form style="display: flex; 
       flex-direction: column;
       /* background-color: lightblue; */
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      align-items: center; 
       width: 300px;">
       <h1>Customer Feedback</h1>
     <p>We would love to hear your thoughts or feedback on how we can improve your experience!</p>
@@ -205,7 +204,214 @@ I'm learning HTML
 <label for="Email">Email:</label><br>
 <input type="text" placeholder="Your answer">
 <div style="padding:12px;"></div>
-<input type="submit" value="Submit" style="width: 80px;">
+
+  </style>
+
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault(); 
+    }
+
+    function dropFileHandler(ev) {
+      ev.preventDefault();}
+       if (ev.dataTransfer.files.length > 0) {
+        const file = ev.dataTransfer.files[0];
+        document.getElementById("div2").innerText = "Uploaded: " + file.name;
+       }
+      
+      else {
+        document.getElementById("div2").innerText = "No file detected";
+      }
+    
+  </script>
+
+
+
+  <h4>Drag and Drop a File</h4>
+
+  <p>Drag and drop a file (like PDF or image) into the box below:</p>
+
+  <div id="div2" ondrop="dropFileHandler(event)" ondragover="allowDrop(event)">
+    Drop file here
+  </div>
+  <div style="padding:12px;"></div>
+<input type="submit" value="Submit" style="width: 80px;"><br>
+
+</form>
+
+
+
+
+<!----canvas-->
+<p>Image to use:</p>
+<img id="waterfall" src="https://media.cntraveler.com/photos/571945e380cf3e034f974b7d/master/pass/waterfalls-Seljalandsfoss-GettyImages-457381095.jpg" alt="The Waterfall" width="220" height="277">
+
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="250" height="300"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<p><button onclick="myCanvas()">Try it</button></p>
+
+<script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("waterfall");
+  ctx.drawImage(img,10,10);
+};
+</script>
+
+<!---html video-->
+<video class="video-style"  controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+<p>
+Video courtesy of 
+<a href="https://youtu.be/5EatZYwOg9U" target="_blank">Tom and jerry</a>.
+</p>
+
+<!---youtube-->
+<iframe class ="iframe-style" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+<!----geolocation-->
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="gmap"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
+
+
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<h1>Drag and Drop API</h1>
+
+<p class="count-class">Drag and drop the github header into the rectangle:</p>
+
+<div id="div3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+<br>
+
+<h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">https://github.com/</h1>
+
+
+<!----web workers-->
+
+
+<h1>Web Worker API</h1>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+  let w;
+
+  function startWorker() {
+    const x = document.getElementById("result");
+    if (typeof (Worker) !== "undefined") {
+      if (typeof (w) == "undefined") {
+        w = new Worker("demo_workers.js");
+      }
+      w.onmessage = function (event) {
+        x.innerHTML = event.data;
+      };
+    } else {
+      x.innerHTML = "Sorry! No Web Worker support.";
+    }
+  }
+
+  function stopWorker() {
+    w.terminate();
+    w = undefined;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

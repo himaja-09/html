@@ -1,5 +1,28 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.heading-style {
+    font-size:60px;
+}
+.heading2-style {
+text-align:center;
+}
+
+.paragraph-style{
+    color:red;
+}
+.div-style{
+    display: flex; justify-content: center; 
+}
+
+.iframe-style{
+    width: 400
+     height= 350
+    }
+
+.video-style{
+width: 250
 }
