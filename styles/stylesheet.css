@@ -10,13 +10,17 @@
     padding: 10px;
     border: 20px solid black;
     margin: 15px 20px 30px 40px;
+    outline: 3px solid red;
+    outline-offset: -15px;
+    text-align: center;
+    text-shadow: 2px 2px blueviolet;
 }
 .heading2-style {
 text-align:center;
 }
 
 .paragraph-style{
-    color:red;
+    color:black;
 }
 .div-style{
     display: flex; justify-content: center; 
@@ -32,13 +36,18 @@ width: 250
 
 }
 .attributes-style{
-    background-image: url(https://wallpapercave.com/wp/wp2919284.jpg);
+    background-image: url(http://4.bp.blogspot.com/-Uk_KFP52APE/URd2jbxosPI/AAAAAAAAKwo/dPSSk-YE4MQ/s1600/plain+blue+cool+hd+images.jpg);
     background-repeat: no-repeat;
     background-position: right;
+    font-family: cursive;
+    font-weight: 200;
+     font-family: "Sofia", sans-serif;
+  font-size: 30px;
 }
 
 .dotted{border-style:dotted;
-border-color: red green blue yellow;
+border-color: red black ;
+vertical-align: text-bottom;
 }
 
 
