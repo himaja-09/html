@@ -6,6 +6,10 @@
 
 .heading-style {
     font-size:60px;
+    width: 20em;
+    padding: 10px;
+    border: 20px solid black;
+    margin: 15px 20px 30px 40px;
 }
 .heading2-style {
 text-align:center;
@@ -25,4 +29,16 @@ text-align:center;
 
 .video-style{
 width: 250
+
 }
+.attributes-style{
+    background-image: url(https://wallpapercave.com/wp/wp2919284.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.dotted{border-style:dotted;
+border-color: red green blue yellow;
+}
+
+
