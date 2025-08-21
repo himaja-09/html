@@ -12,23 +12,18 @@
     margin: 15px 20px 30px 40px;
     outline: 3px solid red;
     outline-offset: -15px;
-    text-align: center;
     text-shadow: 2px 2px blueviolet;
 }
-.heading2-style {
-text-align:center;
-}
+
 
 .paragraph-style{
     color:black;
 }
-.div-style{
-    display: flex; justify-content: center; 
-}
+
 
 .iframe-style{
-    width: 400
-     height= 350
+    width: 400;
+     height: 350;
     }
 
 .video-style{
@@ -38,7 +33,6 @@ width: 250
 .attributes-style{
     background-image: url(http://4.bp.blogspot.com/-Uk_KFP52APE/URd2jbxosPI/AAAAAAAAKwo/dPSSk-YE4MQ/s1600/plain+blue+cool+hd+images.jpg);
     background-repeat: no-repeat;
-    background-position: right;
     font-family: cursive;
     font-weight: 200;
      font-family: "Sofia", sans-serif;
@@ -49,5 +43,155 @@ width: 250
 border-color: red black ;
 vertical-align: text-bottom;
 }
+
+.links-style{
+    a:link {
+  color: red;
+  background-color: orange;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+  background-color: aqua;
+}
+
+
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+  background-color: bisque;
+}
+
+a:active {
+  color: blue;
+  text-decoration: none;
+}
+}
+
+.stylings-lists-style {
+  padding: 20px;
+}
+
+ol li {
+  background: orange;
+  color: black;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+ul {
+  background: powderblue;
+  padding: 20px;
+}
+
+ul li {
+  background: coral;
+  color: black;
+  margin: 5px;
+}
+
+.z-index-style{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -5;
+}
+
+#overflow{
+  background-color: yellow;
+  width: 300px;
+  height: 150px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+#float{
+   float: right;
+}
+
+
+.layout-header{
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column-menu{
+  float: left;
+  padding: 15px;
+}
+
+.clearfix{
+overflow: auto;
+}
+
+
+.column-menu{
+  width: 25%;
+}
+.column-content{
+   width: 75%;
+}
+.cities-style{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.necessaries-style{
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: lightskyblue;
+  color: white;
+}
+
+
+.layout-footer{
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.pseudo-style{
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover .pseudo-style {
+  display: block;
+}
+
+p::first-line {
+  color: red;
+  font-variant: small-caps;
+}
+
+
+.emoji {
+  width: 50px;
+  height: 50px;
+}
+
+::marker { 
+  color: black;
+  font-size: 23px;
+}
+::selection{
+  color:aqua;
+  background-color: black;
+}
+
+img {
+  opacity: 0.5;
+}
+img:hover{
+  opacity: 1.5;
+}
+
+  
+
+
 
 
