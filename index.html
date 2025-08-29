@@ -14,12 +14,9 @@
 <h1 class ="attributes-style">My first heading</h1><br>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"><h1 class="font-effect-fire">Sofia on Fire</h1>
 <a href="https://www.w3schools.com">Visit W3Schools</a>
-<img src="img_girl.jpg" alt="girl_image">
 <h1 class="heading-style">Heading 1</h1>
 <p class="dotted">A dotted border.</p>
-<p>This is some text.</p>
 <h2 class="heading2-style">Heading 2</h2>
-<p>This is some other text.</p>
 <p class="paragraph-style">This is a red paragraph.</p>
 <i class="material-icons">icons</i>
 <a href="https://cdn-icons-png.flaticon.com/512/9494/9494567.png">icon</a>
@@ -33,13 +30,13 @@
 </blockquote>
 </p>
 <q>This is used for short quotation</q>
-<p class="links-style">this is a link<a  href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a></p><br><br>
+<p class="links-style">this is a link<a  href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a></p><br>
 <a href="mailto:himajakanakadandi@gmail.com">send email</a>
 <div>
   <abbr title="World Health Organization">WHO</abbr>
 </div>
 <!---paragraphs-->
-HTML css saves lot of work,controls layout of multiple web pages all at once.
+
 </p>
 <strong>HTML is used for creating webpages</strong>
 <mark>My favorite color is blue</mark>
@@ -170,7 +167,7 @@ HTML css saves lot of work,controls layout of multiple web pages all at once.
 I'm learning HTML
 </textarea><br><br>
 <label for="favcolor">Select your favcolor:</label>
-<input type="color" id="favcolor" name="favcolor" value="#00000">
+<input type="color" id="favcolor" name="favcolor" value="#000000">
 <div style="padding:8px;"></div>
 <button type="button" style="margin-right: 10px;">Click Me!</button>
 <input type="submit" value="Submit">
@@ -217,7 +214,8 @@ I'm learning HTML
     }
 
     function dropFileHandler(ev) {
-      ev.preventDefault();}
+      ev.preventDefault();
+
        if (ev.dataTransfer.files.length > 0) {
         const file = ev.dataTransfer.files[0];
         document.getElementById("div2").innerText = "Uploaded: " + file.name;
@@ -226,7 +224,7 @@ I'm learning HTML
       else {
         document.getElementById("div2").innerText = "No file detected";
       }
-    
+    }
   </script>
 
 
@@ -433,56 +431,234 @@ function dropHandler(ev) {
 
 
 <!---opacity-->
+<h1>Transparent Box</h1>
+<p>When using the opacity property to add transparency to the background of an element, all of its child elements become transparent as well. This can make the text inside a fully transparent element hard to read:</p>
+<div class="first"><p>opacity 0.1</p></div>
+<div class="second"><p>opacity 0.3</p></div>
+<div class="third"><p>opacity 0.6</p></div>
+
+<!----navigation bars---->
+<h2>Vertical Navigation Bar</h2>
+<div class="nav-style">
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</div>
+
+<!----dropdown-->
+<!-- <div class="dropdown-style">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+
+        <h3>Dropdown Menu inside a Navigation Bar</h3>
+        <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+      </div>
+    </li>
+  </ul>
+</div> -->
+
+<!--attribute selectors-->
+<h2>CSS [attribute="value"] Selector</h2>
+<p>The link with target="_blank" gets a yellow background:</p>
+
+<a href="https://www.youtube.com/">youtube.com</a>
+<a href="https://www.disney.in/" target="_blank">disney.in</a>
+<a href="wikipedia.org" target="_top">wikipedia.org</a>
+
+
+<!---css forms-->
+<h2>Responsive Form</h2>
+
+
+<div class="container1">
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!---website layouts-->
+
+<div class="website-layout">
+<div class="header-new">
+  <h1>Website Layout</h1>
+  <p>A practice blog page using HTML & CSS</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">image</div>
+      <p>some text.....</p>
+      <p>The French Revolution of 1789 overthrew the Ancien Régime and produced the Declaration of the Rights of Man, 
+         which expresses the nation's ideals to this day. France reached its political and military zenith in the early 
+         19th century under Napoleon Bonaparte, subjugating part of continental Europe and establishing the First French Empire.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title Description, Dec 5, 2017</h5>
+      <div class="fakeimg" style="height:200px;">image</div>
+      <p>Some text..</p>
+    </div>
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">image</div>
+      <p>Some text about me ......</p>
+    </div>
+    <div class="card">
+      <h3>Popular post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text...</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer-new">
+  <h2>Footer</h2>
+</div>
+</div>
+
+<!--background-images-->
+<div class="coverpage">
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size: 50px;">I am Himaja</h1>
+    <h3>And I am a Professional Student</h3>
+    <button>Hire me</button>
+  </div>
+</div>
+<p>page content....</p>
+</div>
+
+
+<!----gradient-->
+<h1>Linear - gradient Top to bottom</h1>
+<p>This linear gradient starts at the top , transitioning yellow to the bottom</p>
+<div id="grad1"></div>
+
+<!----textshadow-->
+<div class="text-shadow">
+  <h1>This is a text shadow</h1>
+</div>
+
+
+
+
+
+<h2>JavaScript Operators</h2>
+
+<p>JavaScript uses arithmetic operators to compute values (just like algebra).</p>
+
+<p id="demo1"></p>
+
+<!----javascript functions----->
+<h1>javascript functions</h1>
+<p>call a function to compute the product of p1 and p2 and return the result:</p>
+<p id="java-func"></p>
+<!---using a function as a variable-->
+<p>using a function as a variable:</p>
+<p id="func-var"></p>
+<!---events-->
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+<p id="events"></p>
+<!----stringlength-->
+<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
+
+<p>The length of the string is:</p>
+<p id="length"></p>
+
+<!---stringtemplates-->
+<h1>JavaScript Template Strings</h1>
+<h2>Variables in Strings</h2>
+
+<p id="template"></p>
+<!---accessing arrays-->
+<h1>JavaScript Arrays</h1>
+<h2>Bracket Indexing</h2>
+
+<p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+
+<p id="indexing"></p>
+<!----nested arrays-->
+<h1>JavaScript Arrays</h1>
+<h2>Nested JavaScript Objects and Arrays.</h2>
+
+<p id="nested"></p>
+<!----dates-->
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+
+<p id="dates"></p>
+<!----conversion to string-->
+<h1>JavaScript Dates</h1>
+<h2>The StringTo() method</h2>
+<p id="strings"></p>
+<!----math functions-->
+<h2>JavaScript math.Random()</h2>
+<p>Math.random() returns a random value between 0 and 1:</p>
+<p id="math"></p>
+<!----javascript math-->
+<h2>JavaScript Math</h2>
+<p>Math.floor(Math.random() * 10) returns a random integer between 0 and 9 (both 
+included):</p>
+<p id="math-random"></p>
+
+<!---javascript boolean-->
+<h1>Javascript boolean</h1>
+<h2>Use Case: if....else</h2>
+<p id="boolean"></p>
+
+<script src="javascript.js"></script>
+
+
 
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
