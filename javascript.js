@@ -82,8 +82,55 @@ let greeting;
 
 if (hour < 18) {
   greeting = "Good day!";
-} else {
+} 
+else {
   greeting = "Good evening!";
 }
 
 document.getElementById("boolean").innerHTML = greeting;
+//comparisions//
+function myFunction() {
+  let voteable;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("comparisions").innerHTML = voteable + " to vote";
+}
+//switch statements//
+
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("switch").innerHTML = "Today is " + day;
+//loops//
+let text4 = "";
+
+for (let i = 0; i < 5; i++) {
+  text4 += "The number is " + i + "<br>";
+}
+
+document.getElementById("loops").innerHTML = text4;
+
